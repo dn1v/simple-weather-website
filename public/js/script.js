@@ -21,8 +21,6 @@
 //     });
 // }
 
-console.log("Hello express.");
-
 const weatherForm = document.querySelector("form");
 
 weatherForm.addEventListener("submit", (e) => {

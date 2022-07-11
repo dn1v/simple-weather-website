@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.container {
+  background-color: #fff;
+  height: 100vh;
+  width: 100%;
+  border-radius: 4px;
+  background-image: url("../img/jose-ramos-BWCgQw25XUE-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.location-input {
+  padding: 1rem;
+  width: 40rem;
+  background-color: transparent;
+  border: 1px solid #333;
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #222;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #222;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #222;
+}
+
+.btn {
+  padding: 1rem 3rem;
+  margin-left: 1rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 4.6rem;
+  width: 100%;
+  border-radius: 3px;
+  border-bottom: #777 1px solid;
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); */
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  gap: 4rem;
+  list-style: none;
+  align-self: center;
+  padding: 2rem;
+}
+
+.nav-link a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: all 0.3s ease-in;
+  transition-delay: 0.1s;
+}
+
+.nav-link a:hover {
+  border-bottom: #333 1px solid;
+}
+
+.heading-primary {
+  font-size: 3rem;
+  align-self: center;
+}
+
+.footer {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 3px;
+  border-top: #777 1px solid;
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.answer {
+  font-size: 2rem;
+}

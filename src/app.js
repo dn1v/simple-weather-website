@@ -1,10 +1,12 @@
 const express = require("express");
 const path = require("path");
-const app = express();
 const hbs = require("hbs");
 const request = require("request");
 const geocode = require("./utils/geocode");
 const forecast = require("./utils/forecast");
+
+const app = express();
+const port = process.env.PORT || 3000;
 // setup path for express config
 const publicFolder = path.join(__dirname, "../public");
 const views = path.join(__dirname, "../templates/views");
@@ -72,8 +74,8 @@ app.get("*", (req, res) => {
   res.render("404");
 });
 
-app.listen(3000, () => {
-  console.log("3000 is running.");
+app.listen(port, () => {
+  console.log("Server is up on " + port);
 });
 
 //query string is provided at th eond of url --> ? + key=value & key=value

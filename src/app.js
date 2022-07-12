@@ -32,28 +32,32 @@ app.get("", (req, res) => {
 
 app.get("/help", (req, res) => {
   res.render("help", {
-    title: "Help‚ž",
+    title: "Help",
     name: "DNLV",
   });
 });
 
-app.get("/weather", (req, res) => {
-  //end point
-  if (!req.query.address)
-    return res.send({ error: "Address must be provided." });
-
-  geocode(req.query.address, (error, locationData) => {
-    if (error) return res.send({ error: error });
-    forecast(
-      locationData.location,
-      locationData.latitude,
-      locationData.longitude,
-      (error, forecastData) => {
-        if (error) return res.send({ error: error });
-        res.send(forecastData);
-      }
-    );
+app.get("/about", (req, res) => {
+  res.render("weather", {
+    title: "About",
+    name: "DNLV",
   });
+  //end point
+  // if (!req.query.address)
+  //   return res.send({ error: "Address must be provided." });
+
+  // geocode(req.query.address, (error, locationData) => {
+  //   if (error) return res.send({ error: error });
+  //   forecast(
+  //     locationData.location,
+  //     locationData.latitude,
+  //     locationData.longitude,
+  //     (error, forecastData) => {
+  //       if (error) return res.send({ error: error });
+  //       res.send(forecastData);
+  //     }
+  //   );
+  // });
   // res.render("weather", {
   //   title: "Weather",
   //   name: "DNLV",
